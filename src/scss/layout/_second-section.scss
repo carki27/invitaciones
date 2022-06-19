@@ -1,0 +1,107 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.second-section {
+  height: 100vh;
+
+  .container-legend {
+    background-color: v.$secundario;
+    padding: 70px 0 70px 0;
+  }
+
+  .legend {
+    margin: 0 auto;
+    width: 90%;
+
+    @include m.tablet {
+      width: 70%;
+    }
+  }
+
+  h3 {
+    font-size: 20px;
+    text-align: center;
+    font-family: v.$fuente_biblia;
+    color: v.$blanco;
+    letter-spacing: 1px;
+
+    &:last-child {
+      padding-top: 50px;
+    }
+
+    @include m.tablet {
+      font-size: 28px;
+    }
+  }
+}
+
+.padres {
+  border: 2px solid v.$primario;
+  border-radius: 10px;
+  margin-top: 20% !important;
+  word-spacing: 0.1em;
+
+  margin: 0 auto;
+  width: 95%;
+
+  @include m.phone {
+    margin-top: 3% !important;
+  }
+  @include m.tablet {
+    width: 80%;
+    margin-top: 25% !important;
+  }
+
+  @include m.desktopXL {
+    margin-top: 6% !important;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 20px;
+    font-family: v.$fuente_titulo_padres;
+    letter-spacing: 3.2px;
+    word-spacing: 0.1em;
+
+    @include m.tablet {
+      font-size: 25px;
+    }
+  }
+
+  .imagen-padres {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+
+    svg {
+      width: 70pt;
+      &:last-child {
+        width: 60pt;
+      }
+
+      @include m.tablet {
+        width: 100pt;
+
+        &:last-child {
+          width: 85pt;
+        }
+      }
+    }
+  }
+
+  p {
+    margin: 0 auto;
+    width: 90%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-size: 20px;
+    font-family: v.$fuente_parrafo;
+    font-weight: bold;
+
+    @include m.tablet {
+      font-size: 25px;
+      width: 70%;
+    }
+  }
+}
