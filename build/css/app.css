@@ -344,6 +344,7 @@ body {
 p {
   font-size: 2rem;
   line-height: 1.5;
+  font-family: "Lexend", sans-serif;
 }
 
 .contenedor {
@@ -442,7 +443,9 @@ img {
 }
 .second-section .container-legend {
   background-color: #e99f9f;
-  padding: 70px 0 70px 0;
+  height: 40vh;
+  display: flex;
+  align-items: center;
 }
 .second-section .legend {
   margin: 0 auto;
@@ -469,31 +472,25 @@ img {
   }
 }
 
-.padres {
+.container-padres {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container-padres .padres {
   border: 2px solid #0c0869;
   border-radius: 10px;
-  margin-top: 20% !important;
   word-spacing: 0.1em;
   margin: 0 auto;
   width: 95%;
 }
-@media (min-width: 480px) {
-  .padres {
-    margin-top: 3% !important;
-  }
-}
-@media (min-width: 768px) {
-  .padres {
+@media (min-width: 992px) {
+  .container-padres .padres {
     width: 80%;
-    margin-top: 25% !important;
   }
 }
-@media (min-width: 1200px) {
-  .padres {
-    margin-top: 6% !important;
-  }
-}
-.padres h1 {
+.container-padres .padres h1 {
   text-align: center;
   font-size: 20px;
   font-family: "Playfair Display SC", serif;
@@ -501,42 +498,74 @@ img {
   word-spacing: 0.1em;
 }
 @media (min-width: 768px) {
-  .padres h1 {
+  .container-padres .padres h1 {
     font-size: 25px;
   }
 }
-.padres .imagen-padres {
+.container-padres .padres .imagen-padres {
   display: flex;
   justify-content: space-around;
   margin-top: 40px;
 }
-.padres .imagen-padres svg {
+.container-padres .padres .imagen-padres svg {
   width: 70pt;
 }
-.padres .imagen-padres svg:last-child {
+.container-padres .padres .imagen-padres svg:last-child {
   width: 60pt;
 }
 @media (min-width: 768px) {
-  .padres .imagen-padres svg {
+  .container-padres .padres .imagen-padres svg {
     width: 100pt;
   }
-  .padres .imagen-padres svg:last-child {
+  .container-padres .padres .imagen-padres svg:last-child {
     width: 85pt;
   }
 }
-.padres p {
-  margin: 0 auto;
-  width: 90%;
-  padding-top: 15px;
-  padding-bottom: 15px;
+.container-padres .padres .name-padres {
+  display: flex;
+  justify-content: space-around;
+}
+.container-padres .padres .name-padres .madre,
+.container-padres .padres .name-padres .padre {
+  flex-basis: 45%;
+}
+.container-padres .padres .name-padres p {
+  margin: 10px 0;
   text-align: center;
-  font-size: 20px;
+  font-size: 15px;
   font-family: "Lexend", sans-serif;
   font-weight: bold;
+  color: #886c1b;
 }
 @media (min-width: 768px) {
-  .padres p {
+  .container-padres .padres .name-padres p {
     font-size: 25px;
+  }
+}
+
+.third-section {
+  height: 100vh;
+}
+.third-section img {
+  object-fit: cover;
+  height: 80vh;
+}
+.third-section .third-section__p {
+  height: 20vh;
+  background-color: #886c1b;
+  display: flex;
+  align-items: center;
+}
+.third-section .third-section__p p {
+  color: #ffffff;
+  font-size: 20px;
+  margin: 0 auto;
+  width: 95%;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .third-section .third-section__p p {
     width: 70%;
+    font-size: 25px;
   }
 }

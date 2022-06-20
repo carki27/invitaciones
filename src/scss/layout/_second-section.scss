@@ -6,7 +6,9 @@
 
   .container-legend {
     background-color: v.$secundario;
-    padding: 70px 0 70px 0;
+    height: 40vh;
+    display: flex;
+    align-items: center;
   }
 
   .legend {
@@ -35,73 +37,77 @@
   }
 }
 
-.padres {
-  border: 2px solid v.$primario;
-  border-radius: 10px;
-  margin-top: 20% !important;
-  word-spacing: 0.1em;
+.container-padres {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-  margin: 0 auto;
-  width: 95%;
-
-  @include m.phone {
-    margin-top: 3% !important;
-  }
-  @include m.tablet {
-    width: 80%;
-    margin-top: 25% !important;
-  }
-
-  @include m.desktopXL {
-    margin-top: 6% !important;
-  }
-
-  h1 {
-    text-align: center;
-    font-size: 20px;
-    font-family: v.$fuente_titulo_padres;
-    letter-spacing: 3.2px;
+  .padres {
+    border: 2px solid v.$primario;
+    border-radius: 10px;
     word-spacing: 0.1em;
+    margin: 0 auto;
+    width: 95%;
 
-    @include m.tablet {
-      font-size: 25px;
+    @include m.desktop {
+      width: 80%;
     }
-  }
 
-  .imagen-padres {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 40px;
-
-    svg {
-      width: 70pt;
-      &:last-child {
-        width: 60pt;
-      }
+    h1 {
+      text-align: center;
+      font-size: 20px;
+      font-family: v.$fuente_titulo_padres;
+      letter-spacing: 3.2px;
+      word-spacing: 0.1em;
 
       @include m.tablet {
-        width: 100pt;
+        font-size: 25px;
+      }
+    }
 
+    .imagen-padres {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 40px;
+
+      svg {
+        width: 70pt;
         &:last-child {
-          width: 85pt;
+          width: 60pt;
+        }
+
+        @include m.tablet {
+          width: 100pt;
+
+          &:last-child {
+            width: 85pt;
+          }
         }
       }
     }
-  }
 
-  p {
-    margin: 0 auto;
-    width: 90%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    text-align: center;
-    font-size: 20px;
-    font-family: v.$fuente_parrafo;
-    font-weight: bold;
+    .name-padres {
+      display: flex;
+      justify-content: space-around;
 
-    @include m.tablet {
-      font-size: 25px;
-      width: 70%;
+      .madre,
+      .padre {
+        flex-basis: 45%;
+      }
+
+      p {
+        margin: 10px 0;
+        text-align: center;
+        font-size: 15px;
+        font-family: v.$fuente_parrafo;
+        font-weight: bold;
+        color: v.$terciario;
+
+        @include m.tablet {
+          font-size: 25px;
+        }
+      }
     }
   }
 }

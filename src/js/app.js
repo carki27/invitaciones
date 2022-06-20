@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function inicarApp() {
-  simplyCountdown();
+  // simplyCountdown();
 }
 simplyCountdown(countdown, {
   year: 2023, // required
   month: 8, // required
-  day: 23, // required
+  day: 22, // required
   hours: 0, // Default is 0 [0-23] integer
   minutes: 0, // Default is 0 [0-59] integer
   seconds: 0, // Default is 0 [0-59] integer

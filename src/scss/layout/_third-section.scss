@@ -1,0 +1,31 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.third-section {
+  height: 100vh;
+
+  img {
+    object-fit: cover;
+    height: 80vh;
+  }
+
+  .third-section__p {
+    height: 20vh;
+    background-color: v.$terciario;
+    display: flex;
+    align-items: center;
+
+    p {
+      color: v.$blanco;
+      font-size: 20px;
+      margin: 0 auto;
+      width: 95%;
+      text-align: center;
+
+      @include m.tablet {
+        width: 70%;
+        font-size: 25px;
+      }
+    }
+  }
+}
