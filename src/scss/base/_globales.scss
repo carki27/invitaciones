@@ -1,5 +1,9 @@
 @use 'variables' as v;
 
+// html {
+//   scroll-snap-type: y mandatory;
+// }
+
 body {
   font-size: 1.6rem;
 }
@@ -39,3 +43,11 @@ img {
   height: auto;
   display: block;
 }
+
+// .first-section,
+// .second-section,
+// .third-section,
+// .fourth-section {
+//   scroll-snap-align: center;
+//   scroll-snap-stop: always;
+// }

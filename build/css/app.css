@@ -569,3 +569,116 @@ img {
     font-size: 25px;
   }
 }
+
+.fourth-section {
+  height: initial;
+  margin: 0 auto;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .fourth-section {
+    width: 85%;
+    font-size: 25px;
+    height: 100vh;
+  }
+}
+.fourth-section .ubicacion {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+@media (min-width: 992px) {
+  .fourth-section .ubicacion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+.fourth-section .ubicacion img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+@media (min-width: 992px) {
+  .fourth-section .ubicacion img {
+    height: 400px;
+  }
+}
+.fourth-section .discurso-container,
+.fourth-section .recepcion-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 992px) {
+  .fourth-section .discurso-container,
+.fourth-section .recepcion-container {
+    height: initial;
+  }
+}
+
+.discurso-descripcion,
+.recepcion-descripcion {
+  background-color: #152f4c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.discurso-descripcion h2,
+.discurso-descripcion h3,
+.discurso-descripcion p,
+.recepcion-descripcion h2,
+.recepcion-descripcion h3,
+.recepcion-descripcion p {
+  text-align: center;
+  margin: 0;
+  padding: 5px 0;
+}
+.discurso-descripcion h2,
+.recepcion-descripcion h2 {
+  color: #886c1b;
+  font-size: 25px;
+  letter-spacing: 3.2px;
+  word-spacing: 0.1em;
+  font-family: "Playfair Display SC", serif;
+  padding: 15px 0;
+}
+@media (min-width: 768px) {
+  .discurso-descripcion h2,
+.recepcion-descripcion h2 {
+    font-size: 28px;
+  }
+}
+.discurso-descripcion h3,
+.recepcion-descripcion h3 {
+  color: #ffffff;
+  font-size: 15px;
+  font-family: "Lexend", sans-serif;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  .discurso-descripcion h3,
+.recepcion-descripcion h3 {
+    font-size: 20px;
+  }
+}
+.discurso-descripcion p,
+.recepcion-descripcion p {
+  color: #ffffff;
+  font-size: 15px;
+}
+@media (min-width: 768px) {
+  .discurso-descripcion p,
+.recepcion-descripcion p {
+    font-size: 20px;
+  }
+}
+.discurso-descripcion button,
+.recepcion-descripcion button {
+  margin: 10px 0 20px 0;
+  background-color: #886c1b;
+}

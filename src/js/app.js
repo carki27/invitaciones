@@ -4,6 +4,11 @@ document.addEventListener('DOMContentLoaded', function () {
   inicarApp();
 });
 
+// window.addEventListener('resize', function () {
+//   // tu código aquí
+//   console.log('La resolución de tu pantalla es: ' + document.documentElement.clientWidth + ' x ' + document.documentElement.clientHeight);
+// });
+
 function inicarApp() {
   // simplyCountdown();
 }
