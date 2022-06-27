@@ -1,8 +1,9 @@
 @use 'variables' as v;
+@use 'base/mixins' as m;
 
-// html {
-//   scroll-snap-type: y mandatory;
-// }
+html {
+  scroll-snap-type: y mandatory;
+}
 
 body {
   font-size: 1.6rem;
@@ -44,10 +45,25 @@ img {
   display: block;
 }
 
-// .first-section,
-// .second-section,
-// .third-section,
-// .fourth-section {
-//   scroll-snap-align: center;
-//   scroll-snap-stop: always;
-// }
+.first-section,
+.second-section,
+.third-section,
+.fourth-section,
+.fifth-section,
+.sixth-section {
+  @include m.desktop {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
+}
+
+.first-section,
+.second-section,
+.third-section,
+.fifth-section,
+.sixth-section,
+.discurso-container,
+.recepcion-container {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}

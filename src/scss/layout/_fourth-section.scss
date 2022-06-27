@@ -30,6 +30,10 @@
       @include m.desktop {
         height: 400px;
       }
+
+      @include m.phoneS {
+        height: 350px;
+      }
     }
   }
 
@@ -48,7 +52,7 @@
 
 .discurso-descripcion,
 .recepcion-descripcion {
-  background-color: v.$cuaternario;
+  background-color: v.$primario;
   display: flex;
   flex-direction: column;
   align-items: center;

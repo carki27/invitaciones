@@ -1,0 +1,138 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.sixth-section {
+  height: 100vh;
+
+  .image-form {
+    form {
+      .form-text-container {
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        position: absolute;
+        background-color: #152f4c80;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .form-text {
+          border: 5px solid v.$secundario;
+          width: 90%;
+          // height: 80%;
+          margin: 0 auto;
+          text-align: center;
+
+          @include m.tablet {
+            width: 500px;
+          }
+
+          p {
+            font-size: 15px;
+            color: v.$blanco;
+          }
+
+          h2 {
+            color: v.$secundario;
+            font-size: 25px;
+            letter-spacing: 3.2px;
+            word-spacing: 0.1em;
+            font-family: v.$fuente_titulo_padres;
+            padding: 15px 0;
+          }
+        }
+      }
+
+      img {
+        position: relative;
+        height: 100vh;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.contenido-form {
+  width: 95%;
+  margin: 0 auto;
+
+  @include m.phone {
+    width: 80%;
+  }
+}
+
+.confirma {
+  p {
+    padding: 10px;
+  }
+}
+
+.checkbox {
+  padding: 10px;
+  margin-bottom: 20px;
+
+  p {
+    text-align: start;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  label {
+    text-align: start;
+    font-weight: bold;
+    font-family: v.$fuente_parrafo;
+    font-size: 15px;
+    color: v.$blanco;
+  }
+
+  .checkmark {
+    width: 100px;
+  }
+
+  input {
+    &:checked {
+      background-color: v.$secundario;
+      border-color: v.$secundario;
+    }
+  }
+}
+
+.select {
+  padding: 10px;
+  margin-bottom: 20px;
+  p {
+    text-align: start;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 10px;
+  }
+  option,
+  select {
+    color: v.$secundario;
+  }
+}
+
+.comentario {
+  padding: 10px;
+  p {
+    font-weight: bold;
+    text-align: start;
+    margin: 0;
+    padding-bottom: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 10px;
+    font-family: v.$fuente_parrafo;
+    font-weight: bold;
+    // color: v.$secundario;
+  }
+
+  button {
+    background-color: v.$secundario;
+    border-color: v.$secundario;
+  }
+}

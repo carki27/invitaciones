@@ -10,8 +10,9 @@ document.addEventListener('DOMContentLoaded', function () {
 // });
 
 function inicarApp() {
-  // simplyCountdown();
+  desplegarCantidadPersonas();
 }
+
 simplyCountdown(countdown, {
   year: 2023, // required
   month: 8, // required
@@ -42,3 +43,19 @@ simplyCountdown(countdown, {
   zeroPad: false,
   countUp: false, // enable count up if set to true
 });
+
+function desplegarCantidadPersonas() {
+  const si = document.getElementById('si');
+  const no = document.getElementById('no');
+  const select = document.querySelector('.select');
+
+  si.addEventListener('click', function () {
+    if (select.classList.contains('d-none')) {
+      select.classList.remove('d-none');
+    }
+  });
+
+  no.addEventListener('click', function () {
+    select.classList.add('d-none');
+  });
+}
