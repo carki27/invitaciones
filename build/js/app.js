@@ -13,8 +13,33 @@ document.addEventListener('DOMContentLoaded', function () {
 // });
 
 function inicarApp() {
+  aparecerElementos();
   desplegarCantidadPersonas();
   esconderHeader();
+}
+
+function aparecerElementos() {
+  ScrollReveal().reveal('.portada__text', { delay: 300 });
+  ScrollReveal().reveal('.legend', { delay: 300 });
+  ScrollReveal().reveal('.imagen-padres', { delay: 300 });
+  ScrollReveal().reveal('.portada2__p p', { delay: 300 });
+  ScrollReveal().reveal('.ubicacion img', { delay: 300 });
+  ScrollReveal().reveal('.discurso-descripcion-texto', { delay: 300 });
+  ScrollReveal().reveal('.recepcion-descripcion-texto', { delay: 300 });
+  ScrollReveal().reveal('.vestimenta__imagenes', { delay: 300 });
+  ScrollReveal().reveal('#carouselExampleIndicators', { delay: 300 });
+  ScrollReveal().reveal('.gifts', { delay: 300 });
+
+  // if (innerWidth >= 768) {
+  //   ScrollReveal().reveal('.social-media', { distance: '150%', origin: 'bottom', opacity: null, delay: 400 });
+  // } else {
+  //   ScrollReveal().reveal('.social-media', { distance: '150%', origin: 'right', opacity: null, delay: 400 });
+  // }
+
+  // ScrollReveal().reveal('.about__foto img', { distance: '150%', origin: 'left', opacity: null, delay: 200 });
+  // ScrollReveal().reveal('.about__descripcion p');
+  // ScrollReveal().reveal('.glider_container', { easing: 'ease-in' });
+  // ScrollReveal().reveal('.portfolio__contenido');
 }
 
 simplyCountdown(countdown, {
