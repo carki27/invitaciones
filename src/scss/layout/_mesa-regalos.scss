@@ -1,0 +1,79 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.mesa-regalos {
+  color: v.$blanco;
+  margin: 50px auto;
+  width: 95%;
+  background-color: v.$secundario;
+
+  h3 {
+    font-family: v.$fuente_parrafo;
+  }
+
+  .mesa-regalos__container {
+    padding: 80px 20px;
+    margin: 0 auto;
+
+    .gift-svg {
+      display: flex;
+      justify-content: center;
+    }
+
+    .gift-text {
+      text-align: center;
+      margin: 10px 0;
+
+      h2 {
+        font-size: 50px;
+        font-family: v.$fuente_titulos;
+      }
+    }
+  }
+}
+
+.gifts {
+  margin-top: 50px;
+
+  @include m.grid(1, 20px);
+  @include m.tablet {
+    @include m.grid(2, 20px);
+  }
+
+  .sobre-texto,
+  .banco-texto {
+    h3 {
+      margin: 10px 0;
+
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+}
+.sobre,
+.banco {
+  background-color: darken(v.$secundario, $amount: 4) !important;
+  padding: 20px 0;
+}
+
+.sobre-hover,
+.banco-hover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: darken(v.$secundario, $amount: 6) !important;
+
+  h3 {
+    font-size: 30px;
+  }
+}
+.banco-hover {
+  h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  p {
+    margin: 0;
+    font-size: 25px;
+  }
+}

@@ -1,4 +1,7 @@
-const countdown = document.querySelector('.countdown');
+const countdown = document.querySelector('.countdown'),
+  reproductor = document.querySelector('.reproductor');
+
+let ubicacionPrincipal = window.pageYOffset;
 
 document.addEventListener('DOMContentLoaded', function () {
   inicarApp();
@@ -11,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function inicarApp() {
   desplegarCantidadPersonas();
+  esconderHeader();
 }
 
 simplyCountdown(countdown, {
@@ -58,4 +62,16 @@ function desplegarCantidadPersonas() {
   no.addEventListener('click', function () {
     select.classList.add('d-none');
   });
+}
+
+function esconderHeader() {
+  window.onscroll = function () {
+    let Desplazamiento_Actual = window.pageYOffset;
+    if (ubicacionPrincipal >= Desplazamiento_Actual) {
+      reproductor.classList.remove('d-none');
+    } else {
+      reproductor.classList.add('d-none');
+    }
+    ubicacionPrincipal = Desplazamiento_Actual;
+  };
 }

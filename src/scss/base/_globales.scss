@@ -1,12 +1,9 @@
 @use 'variables' as v;
 @use 'base/mixins' as m;
 
-html {
-  scroll-snap-type: y mandatory;
-}
-
 body {
   font-size: 1.6rem;
+  width: 100%;
 }
 
 p {
@@ -32,7 +29,8 @@ h1 {
   font-size: 50px;
 }
 h2 {
-  font-size: 32px;
+  font-size: 50px;
+  font-family: v.$fuente_titulos;
 }
 h3 {
   font-size: 31px;
@@ -45,25 +43,20 @@ img {
   display: block;
 }
 
-.first-section,
-.second-section,
-.third-section,
-.fourth-section,
-.fifth-section,
-.sixth-section {
-  @include m.desktop {
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-  }
+.contenido {
+  position: relative;
 }
 
-.first-section,
-.second-section,
-.third-section,
-.fifth-section,
-.sixth-section,
-.discurso-container,
-.recepcion-container {
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
+.reproductor {
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+  right: 0;
+
+  iframe {
+    @include m.tablet {
+      width: 300px;
+      // height: 70px;
+    }
+  }
 }

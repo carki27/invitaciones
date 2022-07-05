@@ -1,7 +1,7 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-.first-section {
+.portada {
   height: 100vh;
   .couple {
     display: block;
@@ -15,7 +15,7 @@
     }
   }
 
-  .first-section__text {
+  .portada__text {
     position: relative;
     display: flex;
     flex-direction: column;

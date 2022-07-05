@@ -1,7 +1,7 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-.third-section {
+.portada2 {
   height: 100vh;
 
   img {
@@ -9,7 +9,7 @@
     height: 80vh;
   }
 
-  .third-section__p {
+  .portada2__p {
     height: 20vh;
     background-color: v.$terciario;
     display: flex;

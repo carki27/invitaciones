@@ -1,0 +1,21 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.hashtag {
+  background-color: v.$primario;
+  color: v.$blanco;
+  text-align: center;
+  padding: 70px 0;
+  margin-bottom: 20px;
+  border: 5px solid v.$terciario;
+
+  p {
+    font-size: 20px;
+  }
+  h3 {
+    font-family: v.$fuente_titulo_padres;
+    letter-spacing: 3.2px;
+    word-spacing: 0.1em;
+    color: v.$terciario;
+  }
+}
